@@ -9,6 +9,13 @@ check user credentials against LDAP and can fall back to the internal
 authentication if that fails. If a user exists in LDAP but not Q2A,
 the script will create a new user account for the individual.
 
+### Fork specifics
+
+This fork contains modifications to allow a simple Active Directory
+implementation. Instead of requiring a service account, this
+implementation binds directly with the user credentials. For this,
+an extra settings is required to specify the short domain.
+
 ## PREREQS
 
 In order for PHP's built-in LDAP functionality to work correctly, your
